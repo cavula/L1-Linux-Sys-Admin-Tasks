@@ -1,13 +1,9 @@
----
-title: "5-Day L1 Linux System Administrator Lab Plan"
-author: "Your Name"
-output: github_document
----
+# 🧠 5-Day L1 Linux System Admin Lab (RHEL + Hyper-V + Ansible)
 
-# 🧭 5-Day Lab Simulation Plan (L1 Linux System Admin – RHEL + Hyper-V)
+This repository contains a complete hands-on simulation designed to replicate the real-world experience of a **Level 1 Linux System Administrator** over a **5-day period**.
 
-### Goal  
-Simulate 20 months of real-world L1 Linux System Administration in just **5 days** using **RHEL servers + Hyper-V + Ansible + Shell scripts**, replicating hybrid cloud tasks in a local lab.
+### 🎯 Goal  
+Simulate 20–24 months of real-world L1 Linux System Administration in just **5 days** using **RHEL servers + Hyper-V + Ansible + Shell scripts**, replicating hybrid cloud tasks in a local lab.
 
 ---
 
@@ -22,115 +18,39 @@ Simulate 20 months of real-world L1 Linux System Administration in just **5 days
 
 ---
 
-# ✅ Day 1 – Lab Setup + Core System Configuration
+## 🗓️ 5-Day Lab Simulation Plan
 
-### 🔧 Hyper-V Setup
-- Create 4 VMs (2 servers, 2 clients)
-- Configure networking with internal switch
-- Install Guest Tools
-- Set static IPs, hostnames, and `/etc/hosts`
+### ✅ Day 1 – Lab Setup + Core System Configuration
+- Create and configure 4 VMs in Hyper-V
+- Set static IPs, hostnames, `/etc/hosts`
+- Install updates, SSH, firewalld
+- Add admin user and test connectivity
 
-### 🛠 Tasks
-- Install `dnf`, update packages
-- Create `admin` user and assign `sudo`
-- Set up SSH, enable firewalld
-- Configure time sync (`chronyd`)
-- Test connectivity across all machines
+### ✅ Day 2 – User Support + Monitoring + Services
+- Mount NFS, restart Apache, fix SSH
+- Monitor system usage (`top`, `journalctl`, etc.)
+- Script disk usage alerts
 
-### ✅ Deliverables
-- VMs operational with SSH access
-- Static IPs and DNS working
-- Admin user created on all nodes
+### ✅ Day 3 – Shell Scripting + Cron + Backup
+- Write 3 Bash scripts: cleanup, backup, user log
+- Automate with cron
+- Simulate data deletion + restore
 
----
+### ✅ Day 4 – Ansible Basics
+- Install Ansible and set up inventory
+- Create 3 playbooks:
+  - Install packages
+  - Restart services
+  - Push MOTD file
 
-# ✅ Day 2 – User Support + Services + Monitoring
-
-### 🧪 Support Scenarios
-- Password reset for `developer`
-- Mount NFS share from Server01 to Client02
-- Fix SSH access issue for `developer`
-- Restart `httpd` on Server02
-
-### 🔍 Monitoring Tasks
-- Use `top`, `df`, `uptime`, `vmstat`, `journalctl`
-- Configure log rotation and alert scripts
-- Create script to email when `/` > 80% usage
-
-### ✅ Deliverables
-- Disk space script with email alert
-- Apache and SSH troubleshooting documented
-- Monitoring command usage recorded
+### ✅ Day 5 – Simulated L1 Ops + Documentation
+- Run through simulated tickets: SSH issues, restore files, enforce locks
+- Write SOP and Support Guide
+- Document scripts and playbooks
 
 ---
 
-# ✅ Day 3 – Shell Scripting + Cron Jobs + Backup
-
-### 🐚 Shell Scripts
-- `cleanup_tmp.sh`: Delete files older than 3 days
-- `home_backup.sh`: Compress and archive `/home`
-- `session_logger.sh`: Log currently logged-in users
-
-### 🕒 Cron Setup
-- Daily cleanup
-- Nightly backup
-- Log sessions every 10 min
-
-### 💾 Backup Tasks
-- Use `rsync` or `tar`
-- Simulate deletion + restore
-
-### ✅ Deliverables
-- 3 scripts tested and working
-- Crontabs set
-- Restore verified
-
----
-
-# ✅ Day 4 – Ansible for Configuration Management
-
-### ⚙️ Setup
-- Install Ansible on Server02
-- Setup SSH key auth to all nodes
-- Add all hosts to `/etc/ansible/hosts`
-
-### 🔧 Tasks
-- Ping all nodes using Ansible
-- Playbook 1: Install `vim`, `htop`, `httpd`
-- Playbook 2: Restart `httpd`
-- Playbook 3: Push `/etc/motd` file
-
-### ✅ Deliverables
-- 3 playbooks committed
-- Ad-hoc commands executed
-- Inventory file complete
-
----
-
-# ✅ Day 5 – Simulated Real-World Operations
-
-### 🕹️ Day-in-the-Life Simulation
-- Fix SSH for developer
-- Restart failed Apache service
-- Run scheduled backup
-- Lock inactive users (simulate security policy)
-- Restore developer's deleted files
-
-### 📄 Documentation Tasks
-- Create:
-  - `L1_SOP.md`
-  - `User_Support_Guide.md`
-  - Script library
-  - Playbook library
-
-### ✅ Deliverables
-- SOPs created
-- Lab run report
-- Everything versioned in GitHub
-
----
-
-## 🗂️ Suggested GitHub Repo Structure
+## 📁 Suggested GitHub Structure
 
 ```bash
 L1-Linux-Sys-Admin-Tasks/
