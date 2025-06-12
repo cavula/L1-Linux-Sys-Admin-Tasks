@@ -2,7 +2,7 @@
 
 This repository contains a complete hands-on simulation designed to replicate the real-world experience of a **Level 1 Linux System Administrator** over a **5-day period**.
 
-The goal is to simulate 20 months of day-to-day operations, scripting, automation, user support, and documentation tasks — using a **locally hosted lab on Microsoft Hyper-V** with **RHEL servers**, **Linux clients**, **Ansible**, and **Bash** scripting.
+The goal is to simulate 24 months of day-to-day operations, scripting, automation, user support, and documentation tasks — using a **locally hosted lab on Microsoft Hyper-V** with **RHEL servers**, **Linux clients**, **Ansible**, and **Bash** scripting.
 
 ---
 
